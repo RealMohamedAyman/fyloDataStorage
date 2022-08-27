@@ -1,0 +1,265 @@
+:root {
+    --Grad1: hsl(6, 100%, 80%);
+    --Grad2: hsl(335, 100%, 65%);
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%); 
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+    --FontSize: 14px;
+    --FontFamily: "Raleway";
+    --FontW1: 400;
+    --FontW2: 700;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+* {
+    font-family: var(--FontFamily);
+    font-size: var(--FontSize);
+    color: white;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    background-color: var(--VeryDarkBlue);
+    background-image: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex !important;
+}
+
+.data-side {
+    margin-left: 30px !important;
+    height: 95%;
+    margin-top: 5%;
+}
+
+.logo-side {
+    width: 275px !important;
+    border-radius: 20px 120px 20px 20px !important;
+}
+
+.logo-side .tools {
+    margin-top: 30px;
+}
+
+.logo-side .boxed {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: var(--VeryDarkBlue);
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.logo-side .boxed img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contain {
+    background-color: var(--DarkBlue);
+    padding: 40px;
+    width: 550px;
+    border-radius: 20px;
+}
+
+.bar {
+    width: 98%;
+    height: 17px;
+    border-radius: 20px;
+    background-color: var(--VeryDarkBlue);
+
+}
+
+.bar .loaded {
+    width: 75%;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--Grad1), var(--Grad2));
+    border-radius: 20px;
+    position: relative;
+}
+
+.bar .loaded::after {
+    content: "";
+    background: #fff;
+    width: 4%;
+    height: 85%;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    width: 140px;
+    height: 45px;
+    border-radius: 10px 10px 0 10px;
+    color: var(--GrayishBlue);
+    font-weight: var(--FontW2);
+    font-size: 13px;
+    text-align: center;
+}
+
+.popup::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -29px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    /* border-right: 20px solid transparent; */
+    border-top: 30px solid #fff;
+    clear: both;
+}
+
+.popup span {
+    color: black !important;
+    font-size: 40px !important;
+    line-height: -1.5px !important;
+}
+
+span {
+    color: var(--PaleBlue);
+    font-weight: var(--FontW2);
+}
+
+p {
+    color: var(--PaleBlue);
+}
+
+.inline {
+    display: inline-block;
+}
+
+.txt {
+    color: var(--PaleBlue);
+    font-weight: var(--FontW2);
+}
+
+.txts {
+    margin-top: 10px;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contain {
+        width: 400px;
+    }
+
+    .logo-side {
+        width: 200px !important;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .contain {
+            width: 275px;
+        }
+    
+        .logo-side {
+            width: 190px !important;
+        }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .container {
+        background-image: url("../images/bg-mobile.png");
+        background-size: cover;
+    }
+
+    .center {
+        flex-direction: column;
+    }
+    .contain {
+        width: 275px;
+    }
+
+    .data-side {
+        margin-left: 0 !important;
+        text-align: center !important;
+    }
+
+    .logo-side {
+        margin-right: 0 !important;
+        width: 275px !important;
+    }
+
+    .popup {
+        top: 400px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+    }
+
+    .popup::after {
+        content: "";
+        border: none;
+    }
+
+    .bar .loaded::after {
+        width: 6%;
+        right: -3px;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+        .contain {
+            width: 190px;
+        }
+    
+        .logo-side {
+            margin-right: 0;
+            width: 190px !important;
+        }
+
+        .popup {
+            top: 400px;
+            height: 30px;
+            padding: 15px;
+            line-height: 100%;
+        }
+
+        .bar .loaded::after {
+            width: 10%;
+            right: -5px;
+        }
+}

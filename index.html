@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Fylo data storage component</title>
+
+    <!-- Normalize Everything Stylesheet -->
+    <link rel="stylesheet" href="./style/Normalize.css" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Attribution Style -->
+    <style>
+        .attribution {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 13px;
+            text-align: center;
+            font-weight: var(--FontW2);
+        }
+
+        .attribution a {
+            color: var(--PaleBlue);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="center">
+            <div class="logo-side contain">
+                <img src="./images/logo.svg" alt="fylo-logo" />
+                <div class="tools">
+
+                    <div class="boxed"><img src="./images/icon-document.svg" alt="document" /></div>
+                    <div class="boxed"><img src="./images/icon-folder.svg" alt="folder" /></div>
+                    <div class="boxed"><img src="./images/icon-upload.svg" alt="upload" /></div>
+                </div>
+            </div>
+            <div class="data-side contain">
+                <p>You’ve used <span>815 GB</span> of your storage</p>
+                <div class="bar"><div class="loaded"></div></div>
+                <div class="popup">
+                    <span>185</span> GB Left
+                </div>
+                <div class="txts">
+                    <div class="lefttxt txt inline">
+                        0 GB
+                    </div>
+                    <div class="righttxt txt inline">
+                        1000 GB
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://youtube.com/c/NaroxEG" target="_blank">Mohamed Ayman AKA. Narox</a>.
+        </div>
+    </div>
+</body>
+
+</html>
